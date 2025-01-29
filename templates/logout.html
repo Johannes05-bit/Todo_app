@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}🐶 Sesión Cerrada - MediCitas Perros{% endblock %}
+
+{% block content %}
+<style>
+    /* Estilos CSS personalizados para el formulario de inicio de sesión */
+    .login-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: url('https://source.unsplash.com/random/1920x1080/?dogs,pets') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+    .login-form {
+        background-color: #fff;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        width: 350px;
+    }
+
+    /* ... Resto de los estilos CSS */
+</style>
+
+<div class="logout-container">
+    <div class="logout-card">
+       <center><h2>¡Hasta luego!</h2>
+        <p>Tu sesión ha cerrado. ¡No olvides cuidar de tu peludo amigo!</p>
+        <a href="{{ url_for('login') }}" class="btn-logout">Volver a Iniciar Sesión</a>
+    </center> 
+    </div>
+</div>
+
+{% endblock %}

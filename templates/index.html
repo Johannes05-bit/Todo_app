@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block title %}TipoVideojuego{% endblock %}
+{% block content %}
+<body>
+    <h1>Razas de Perros 🐶🐾</h1>
+
+    <div class="container form-container">
+        <form action="/agregar" method="post">
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <input type="text" class="form-control" name="nombre" placeholder="Nombre de la Raza" required>
+                </div>
+                <div class="col-md-4">
+                    <input type="text" class="form-control" name="tamaño" placeholder="Tamaño (Pequeño, Mediano, Grande)" required>
+                </div>
+                <div class="col-md-4">
+                    <input type="number" class="form-control" name="edad" placeholder="Edad (en años)" required>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <button type="submit" class="btn btn-agregar">Agregar Raza </button>
+            </div>
+        </form>
+    </div>
+
+    <div class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nombre</th>
+                    <th>Tamaño</th>
+                    <th>Edad</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for raza in razas %}
+                <tr>
+                    <td>{{ raza.id }}</td>
+                    <td>{{ raza.nombre }}</td>
+                    <td>{{ raza.tamaño }}</td>
+                    <td>{{ raza.edad }} años</td>
+                    <td>
+                        <form action="/eliminar/{{ raza.id }}" method="post" style="display:inline;">
+                            <button type="submit" class="btn btn-delete">Eliminar 🗑️</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% endblock %}

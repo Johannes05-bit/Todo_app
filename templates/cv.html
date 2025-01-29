@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% block title %}Currículum de Johan Castro{% endblock %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="imgan.ico"
+</head>
+<body>
+
+        <h1 style="text-align: center;" >Johannes Gustavo Castro Celi</h1>
+        <center>
+            <img src="{{ url_for('static', filename='images/Johan.png') }}" alt="Foto de perfil" class="Johan Castro">
+        </center>
+        <p>Edad: 21 años</p>
+        <p>Dirección: Cdla. Guayacanes</p>
+        <p>Ciudad: Guayaquil</p>
+        <p>Correo Electrónico: johancceli41@gmail.com</p>
+        <p>Celular: 0998044819</p>
+
+    <section>
+        <h2>Perfil Profesional</h2>
+        <p>Atencion al cliente y funciones polivalentes en el area de restaurante.</p>
+    </section>
+
+    <section>
+        <h2>Experiencia Laboral</h2>
+        <ul>
+            <li>
+                <h3>Urbano Express</h3>
+                <p>Cargo: Digitador</p>
+            </li>
+            <li>
+                <h3>Corporacion el Rosado</h3>
+                <p>Cargo: Auxiliar de restaurante</p>
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Educación</h2>
+        <ul>
+            <li>
+                <h3>Unidad Educativa Fiscal Guayaquil</h3>
+                <p>Título: Bachiller</p>
+                <p>Fecha de finalización: 2021</p>       
+            <li> <h3>Universidad de Guayaquil</h3>
+                <p>Título: Gestion de la Informacion Gerencial</p>
+                <p>Fecha de finalización: En proceso(4to semestre)</p>
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Habilidades</h2>
+        <ul>
+            <li>Atencion al cliente</li>
+            <li>Ventas</li>
+            <li>Digitador</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Idiomas</h2>
+        <ul>
+            <li>Español</li>
+            <li>Inglés</li>
+            <li>Portugues</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>Red social <a href="https://www.instagram.com/johan_cas05/profilecard/?igsh=ZHY4NWxoY3RyazJr" target="_blank">Instagram</a></p>
+    </footer>
+
+</body>
+</html>
+{% endblock %}
